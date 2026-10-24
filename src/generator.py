@@ -23,7 +23,7 @@ def get_selection(use_lower, use_upper, use_digits, use_symbols):
 
 def generate_password(length, selected_sets):
 
-# Eine Funktio, die eine gewünschte Länge und die erlaubten Zeichenarten bekommt
+# Eine Funktion, die eine gewünschte Länge und die erlaubten Zeichenarten bekommt
 
  if (not pool){
         raise ValueError("Select at least one character category.")
