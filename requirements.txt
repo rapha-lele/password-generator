@@ -1,0 +1,5 @@
+# Keine externen Pakete nötig
+# Python 3.8+ wird empfohlen
+
+# No external packages required
+# Python 3.8+ is recommended

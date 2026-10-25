@@ -19,28 +19,25 @@ def get_selection(use_lower, use_upper, use_digits, use_symbols):
         if enabled:
             pool += chars
             sets.append(chars)
-    return pool, set
+    return pool, sets
 
-def generate_password(length, selected_sets):
+def generate_password(length, use_lower, use_upper, use_digits, use_symbols):
 
     # Auswahl holen
 
-    pool, selected_sets(use_lower, use_upper, use_digits, use_symbols):    
+    pool, selected_sets = get_selection(use_lower, use_upper, use_digits, use_symbols)
 
     # Fehlderprüfung
 
-    if (not pool){
+    if not pool:
         raise ValueError("Select at least one character category.")
-        }
-    if (length < 1): {
+    if length < 1:
         raise ValueError("Password length must be at least 1.")
-    }
-    if (length < len(selected_sets)): {
+    if length < len(selected_sets):
         raise ValueError(
             f"Length must be at least {len(selected_sets)} "
             f"to include every selected category."
         )
-    }
 
     # Aus jeder gewählten Kategorie ein Zeichen nehmen
     chars = [random.choice(s) for s in selected_sets]
